@@ -1,24 +1,11 @@
 import { Card, TextInput, Textarea, SimpleGrid, Group, Title, Button } from '@mantine/core';
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
+import { errorSnack, pushSnackbar } from './SnackbarService';
 
 export function GetInTouchSimple() {
   const form = useRef(null);
-
-  // const form = useForm({
-  //   initialValues: {
-  //     name: '',
-  //     email: '',
-  //     subject: '',
-  //     message: '',
-  //   },
-  //   validate: {
-  //     name: (value) => value.trim().length < 2,
-  //     email: (value) => !/^\S+@\S+$/.test(value),
-  //     subject: (value) => value.trim().length === 0,
-  //   },
-  // });
-
+  const [maxEmails, setMaxEmails] = useState<number>(0);
 
   if(!form) {
     return;
@@ -26,6 +13,10 @@ export function GetInTouchSimple() {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
+    if(maxEmails > 2) {
+      pushSnackbar(errorSnack("You have reached your email quota for this session."));
+      return;
+    }
     if(!form.current){
       return;
     }
@@ -33,6 +24,7 @@ export function GetInTouchSimple() {
     emailjs.sendForm('service_alck8gn', 'template_rcey5s5', form.current, 'Cc6XZRzrs2B-yS2DH')
       .then((result) => {
           console.log(result.text);
+          setMaxEmails((prevMax) => prevMax + 1)
       }, (error) => {
           console.log(error.text);
       });
@@ -59,12 +51,14 @@ export function GetInTouchSimple() {
           placeholder="Your name"
           name="from_name"
           variant="filled"
+          required
         />
         <TextInput
           label="Email"
           placeholder="Your email"
           name="from_email"
           variant="filled"
+          required
         />
       </SimpleGrid>
       <Textarea
@@ -76,6 +70,7 @@ export function GetInTouchSimple() {
         autosize
         name="message"
         variant="filled"
+        required
       />
 
       <Group position="center" mt="xl">

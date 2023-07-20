@@ -8,6 +8,7 @@ import { BlogCard } from "./Components/BlogCard";
 import yourBusinessHere from './assets/yourbusinesshere.png'
 import theteam from './data/theteam.json'
 import { MeetTheTeam } from "./Components/MeetTheTeam";
+import { Notifications } from "@mantine/notifications";
 
 // const links: { link: string; label: string }[] = [ { link: '', label: ''}]
 const data = [
@@ -21,6 +22,7 @@ export default function Welcome() {
 
   return (
     <ThemeProvider>
+      <Notifications position='bottom-center'/>
       <HeaderMiddle/>
       <Stack mt={80}>
         <NewsCarousel />
