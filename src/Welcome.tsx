@@ -3,6 +3,8 @@ import { ThemeProvider } from "./ThemeProvider";
 import { HeaderMiddle } from "./Components/HeaderMiddle";
 import { GetInTouchSimple } from "./Components/GetInTouchSimple";
 import { Schedule } from "./Components/Schedule";
+import { NewsCarousel } from "./Components/NewsCarousel";
+import { BlogCard } from "./Components/BlogCard";
 
 // const links: { link: string; label: string }[] = [ { link: '', label: ''}]
 const data = [
@@ -17,11 +19,17 @@ export default function Welcome() {
   return (
     <ThemeProvider>
       <HeaderMiddle/>
-      <Stack>
-        <Text mt={10}>Welcome to the homepage of Columbia FC</Text>
-        <Text>The official football team of Columbia, Maryland</Text>
+      <Stack mt={80}>
+        <NewsCarousel />
         <Text>Results 2023/2024:</Text>
         <Schedule data={data}/>
+        <BlogCard 
+          image={'src/assets/yourbusinesshere.png'} 
+          category={'news'} 
+          title={'Contact CFC for sponsorship opportunites!'}
+          date={''}
+          author={{name: '', avatar: ''}}
+        />
         <GetInTouchSimple />
       </Stack>
     </ThemeProvider>

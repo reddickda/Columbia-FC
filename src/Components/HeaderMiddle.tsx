@@ -98,7 +98,7 @@ export function HeaderMiddle() {
           {items}
         </Group> */}
 
-        <Text size={'lg'}>Columbia FC</Text>
+        <div><Text weight={700} size='large'>Columbia FC</Text>Where Soccer Meets Community</div>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon component="a" href="https://www.tiktok.com/@columbiafcmd" size="lg">
