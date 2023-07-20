@@ -1,5 +1,6 @@
 import { Avatar, Badge, Table, Text, ScrollArea } from '@mantine/core';
 import logo from '../assets/image0.jpg'
+import { useMediaQuery } from '@mantine/hooks';
 
 interface UsersTableProps {
   data: { avatar: string; name: string; email: string; nationality: string, position: string }[];
@@ -8,6 +9,8 @@ interface UsersTableProps {
 // const positionData = ['Manager', 'Forward', 'Midfield', 'Defender'];
 
 export function MeetTheTeam({ data }: UsersTableProps) {
+  const mobile = useMediaQuery(`(max-width: 500px)`);
+
   const rows = data.map((item) => (
     <tr key={item.name}>
       <td>
@@ -25,9 +28,9 @@ export function MeetTheTeam({ data }: UsersTableProps) {
         <Text>{item.position}</Text>
       </td>
       <td>{item.nationality}</td>
-      <td>
+      {!mobile && <td>
           <Badge fullWidth>Active</Badge>
-      </td>
+      </td>}
     </tr>
   ));
 
@@ -40,7 +43,7 @@ export function MeetTheTeam({ data }: UsersTableProps) {
             <th style={{textAlign:'center'}}>Player</th>
             <th style={{textAlign:'center'}}>Position</th>
             <th style={{textAlign:'center'}}>Nationality</th>
-            <th style={{textAlign:'center'}}>Status</th>
+            {!mobile &&  <th style={{textAlign:'center'}}>Status</th>}
           </tr>
         </thead>
         <tbody>{rows}</tbody>
