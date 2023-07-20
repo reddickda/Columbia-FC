@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { createStyles, Avatar, Header, Group, ActionIcon, Container, Text, rem } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react';
+// import { useDisclosure } from '@mantine/hooks';
+import {IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react';
 import crest from '../assets/image0.jpg'
 
 const useStyles = createStyles((theme) => ({
@@ -64,28 +63,32 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface HeaderMiddleProps {
-  links: { link: string; label: string }[];
-}
+// interface HeaderMiddleProps {
+//   links: { link: string; label: string }[];
+// }
 
-export function HeaderMiddle({ links }: HeaderMiddleProps) {
-  const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
-  const { classes, cx } = useStyles();
+// export function HeaderMiddle({ links }: HeaderMiddleProps) {
+export function HeaderMiddle() {
 
-  const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
-    >
-      {link.label}
-    </a>
-  ));
+  // const [opened, { toggle }] = useDisclosure(false);
+  // const [active, setActive] = useState(links[0].link);
+  // const { classes, cx } = useStyles();
+
+  const { classes } = useStyles();
+
+  // const items = links.map((link) => (
+  //   <a
+  //     key={link.label}
+  //     href={link.link}
+  //     className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+  //     onClick={(event) => {
+  //       event.preventDefault();
+  //       setActive(link.link);
+  //     }}
+  //   >
+  //     {link.label}
+  //   </a>
+  // ));
 
   return (
     <Header style={{position: 'absolute', top: 0}} height={80} mb={120}>
