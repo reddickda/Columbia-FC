@@ -5,6 +5,7 @@ import { GetInTouchSimple } from "./Components/GetInTouchSimple";
 import { Schedule } from "./Components/Schedule";
 import { NewsCarousel } from "./Components/NewsCarousel";
 import { BlogCard } from "./Components/BlogCard";
+import yourBusinessHere from './assets/yourbusinesshere.png'
 
 // const links: { link: string; label: string }[] = [ { link: '', label: ''}]
 const data = [
@@ -24,7 +25,7 @@ export default function Welcome() {
         <Text>Results 2023/2024:</Text>
         <Schedule data={data}/>
         <BlogCard 
-          image={'src/Columbia-FC/yourbusinesshere.png'} 
+          image={yourBusinessHere} 
           category={'news'} 
           title={'Contact CFC for sponsorship opportunites!'}
           date={''}

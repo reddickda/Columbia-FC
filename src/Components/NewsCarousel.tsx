@@ -44,7 +44,7 @@ function CardCarousel({ image, title, category, link }: CardProps) {
       shadow="md"
       p="xl"
       radius="md"
-      sx={{ backgroundImage: `url(${image})` }}
+      sx={{ backgroundImage: `url('${image}')` }}
       className={classes.card}
     >
       <div>
@@ -67,14 +67,14 @@ function CardCarousel({ image, title, category, link }: CardProps) {
 const data = [
   {
     image:
-      'src/Columbia-FC/Capture.PNG',
+      '/Capture.PNG',
     title: 'Kings of Columbia',
     category: 'sports',
     link: 'https://www.protagonistsoccer.com/features/2019/7/26/the-kings-of-columbia'
   },
   {
     image:
-      'src/Columbia-FC/fredfront.jpg',
+      '/fredfront.jpg',
     title: 'Find us on Facebook!',
     category: 'social',
     link: 'https://www.facebook.com/ColumbiaFCMD/'
