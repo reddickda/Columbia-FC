@@ -1,4 +1,4 @@
-import { createStyles, Paper, Text, ThemeIcon, rem, Avatar, Button } from '@mantine/core';
+import { createStyles, Paper, Text, ThemeIcon, rem, Avatar } from '@mantine/core';
 import logo from './assets/image0.jpg'
 
 const useStyles = createStyles((theme) => ({
