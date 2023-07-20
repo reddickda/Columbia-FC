@@ -10,11 +10,17 @@ import theteam from './data/theteam.json'
 import { MeetTheTeam } from "./Components/MeetTheTeam";
 import { Notifications } from "@mantine/notifications";
 
-// const links: { link: string; label: string }[] = [ { link: '', label: ''}]
+const links: { link: string; label: string }[] = [
+  { link: 'https://www.marylandmajorsoccer.com/home', label: 'Maryland Majors' },
+  { link: 'https://epslsoccer.com/', label: 'EPSL Mid Atlantic' }]
+
+const routes: { link: string; label: string }[] = [
+  { link: '/about', label: 'About' }]
+
 const data = [
-  { date: '8-5-2023', team: 'Baltimore Kickers', location: 'Troy Park', result: 'W'},
-  { date: '9-8-2023',team: 'Christos FC', location: 'Blandair Park', result: 'W'},
-  { date: '10-12-2023', team: 'Liverpool FC', location: 'Anfield', result: 'W'},
+  { date: '8-5-2023', team: 'Baltimore Kickers', location: 'Troy Park', result: 'W' },
+  { date: '9-8-2023', team: 'Christos FC', location: 'Blandair Park', result: 'W' },
+  { date: '10-12-2023', team: 'Liverpool FC', location: 'Anfield', result: 'W' },
 ]
 
 
@@ -22,17 +28,17 @@ export default function Welcome() {
 
   return (
     <ThemeProvider>
-      <Notifications position='bottom-center'/>
-      <HeaderMiddle/>
+      <Notifications position='bottom-center' />
+      <HeaderMiddle links={links} routes={routes} />
       <Stack mt={80}>
         <NewsCarousel />
-        <Schedule data={data}/>
-        <BlogCard 
-          image={yourBusinessHere} 
-          category={'news'} 
+        <Schedule data={data} />
+        <BlogCard
+          image={yourBusinessHere}
+          category={'news'}
           title={'Contact CFC for sponsorship opportunites!'}
           date={''}
-          author={{name: '', avatar: ''}}
+          author={{ name: '', avatar: '' }}
         />
         <MeetTheTeam data={theteam} />
         <GetInTouchSimple />

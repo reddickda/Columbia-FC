@@ -1,7 +1,9 @@
-import { createStyles, Avatar, Header, Group, ActionIcon, Container, Text, rem } from '@mantine/core';
-// import { useDisclosure } from '@mantine/hooks';
-import {IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react';
+import { createStyles, Avatar, Header, Group, ActionIcon, Container, Text, rem, Burger, Transition, Paper } from '@mantine/core';
+import { IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react';
 import logo from '../assets/image0.jpg'
+import { useState } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -33,11 +35,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   burger: {
-    marginRight: theme.spacing.md,
-
-    [theme.fn.largerThan('sm')]: {
-      display: 'none',
+    [theme.fn.smallerThan('sm')]: {
+      marginLeft: 10    
     },
+    marginRight: theme.spacing.md,
   },
 
   link: {
@@ -61,42 +62,69 @@ const useStyles = createStyles((theme) => ({
       color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
     },
   },
+  dropdown: {
+    position: 'absolute',
+    top: 80,
+    left: 300,
+    right: 0,
+    zIndex: 10,
+    borderTopRightRadius: 0,
+    borderTopLeftRadius: 0,
+    borderTopWidth: 0,
+    overflow: 'hidden',
+    width: 300,
+    [theme.fn.smallerThan('sm')]: {
+      left: 80,
+    },
+  },
 }));
 
-// interface HeaderMiddleProps {
-//   links: { link: string; label: string }[];
-// }
+interface HeaderMiddleProps {
+  links: { link: string; label: string }[];
+  routes: { link: string; label: string}[];
+}
 
-// export function HeaderMiddle({ links }: HeaderMiddleProps) {
-export function HeaderMiddle() {
+export function HeaderMiddle({ links, routes }: HeaderMiddleProps) {
 
-  // const [opened, { toggle }] = useDisclosure(false);
-  // const [active, setActive] = useState(links[0].link);
-  // const { classes, cx } = useStyles();
+  const [opened, { toggle }] = useDisclosure(false);
+  const [active, setActive] = useState(links[0].link);
+  const { classes, cx } = useStyles();
 
-  const { classes } = useStyles();
+  const items = links.map((link) => (
+    <a
+      key={link.label}
+      href={link.link}
+      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+      onClick={() => {
+        setActive(link.link);
+      }}
+    >
+      {link.label}
+    </a>
+  ));
 
-  // const items = links.map((link) => (
-  //   <a
-  //     key={link.label}
-  //     href={link.link}
-  //     className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-  //     onClick={(event) => {
-  //       event.preventDefault();
-  //       setActive(link.link);
-  //     }}
-  //   >
-  //     {link.label}
-  //   </a>
-  // ));
+  routes.map((route) => {
+    items.push(<Link
+      key={route.label}
+      className={cx(classes.link, { [classes.linkActive]: active === route.link })}
+      to={route.link}
+    >
+      {route.label}
+    </Link>)
+  })
 
   return (
-    <Header style={{position: 'absolute', top: 0}} height={80} mb={120}>
+    <Header style={{ position: 'absolute', top: 0 }} height={80} mb={120}>
       <Container className={classes.inner}>
         <Avatar size={'lg'} src={logo} />
-        {/* <Group className={classes.links} spacing={5}>
-          {items}
-        </Group> */}
+        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+        <Transition transition="pop-top-right" duration={200} mounted={opened}>
+          {(styles) => (
+            <Paper className={classes.dropdown} withBorder style={styles}>
+              {items}
+            </Paper>
+          )}
+        </Transition>
 
         <div><Text weight={700} size='large'>Columbia FC</Text>Where Soccer Meets Community</div>
 
