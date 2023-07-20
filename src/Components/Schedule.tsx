@@ -49,10 +49,10 @@ export function Schedule({ data }: TableScrollAreaProps) {
       <caption>Results 2023/2024</caption>
         <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
           <tr>
-            <th>Date</th>
-            <th>Team</th>
-            <th>Location</th>
-            <th>Result</th>
+            <th style={{textAlign:'center'}}>Date</th>
+            <th style={{textAlign:'center'}}>Team</th>
+            <th style={{textAlign:'center'}}>Location</th>
+            <th style={{textAlign:'center'}}>Result</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
