@@ -1,7 +1,7 @@
 import { createStyles, Avatar, Header, Group, ActionIcon, Container, Text, rem } from '@mantine/core';
 // import { useDisclosure } from '@mantine/hooks';
 import {IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react';
-import crest from '../assets/image0.jpg'
+import crest from '../Columbia-FC/image0.jpg'
 
 const useStyles = createStyles((theme) => ({
   inner: {

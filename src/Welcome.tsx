@@ -24,7 +24,7 @@ export default function Welcome() {
         <Text>Results 2023/2024:</Text>
         <Schedule data={data}/>
         <BlogCard 
-          image={'src/assets/yourbusinesshere.png'} 
+          image={'src/Columbia-FC/yourbusinesshere.png'} 
           category={'news'} 
           title={'Contact CFC for sponsorship opportunites!'}
           date={''}

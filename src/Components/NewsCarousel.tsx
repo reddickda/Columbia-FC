@@ -67,14 +67,14 @@ function CardCarousel({ image, title, category, link }: CardProps) {
 const data = [
   {
     image:
-      'src/assets/Capture.PNG',
+      'src/Columbia-FC/Capture.PNG',
     title: 'Kings of Columbia',
     category: 'sports',
     link: 'https://www.protagonistsoccer.com/features/2019/7/26/the-kings-of-columbia'
   },
   {
     image:
-      'src/assets/fredfront.jpg',
+      'src/Columbia-FC/fredfront.jpg',
     title: 'Find us on Facebook!',
     category: 'social',
     link: 'https://www.facebook.com/ColumbiaFCMD/'
