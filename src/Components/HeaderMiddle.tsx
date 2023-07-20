@@ -1,6 +1,7 @@
 import { createStyles, Avatar, Header, Group, ActionIcon, Container, Text, rem } from '@mantine/core';
 // import { useDisclosure } from '@mantine/hooks';
 import {IconBrandInstagram, IconBrandTiktok } from '@tabler/icons-react';
+import logo from '../assets/image0.jpg'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -92,7 +93,7 @@ export function HeaderMiddle() {
   return (
     <Header style={{position: 'absolute', top: 0}} height={80} mb={120}>
       <Container className={classes.inner}>
-        <Avatar size={'lg'} src={'src/assets/image0.jpg'} />
+        <Avatar size={'lg'} src={logo} />
         {/* <Group className={classes.links} spacing={5}>
           {items}
         </Group> */}
