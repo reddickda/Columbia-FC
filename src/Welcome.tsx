@@ -1,4 +1,4 @@
-import { Stack, Text } from "@mantine/core";
+import { Stack } from "@mantine/core";
 import { ThemeProvider } from "./ThemeProvider";
 import { HeaderMiddle } from "./Components/HeaderMiddle";
 import { GetInTouchSimple } from "./Components/GetInTouchSimple";
@@ -22,7 +22,6 @@ export default function Welcome() {
       <HeaderMiddle/>
       <Stack mt={80}>
         <NewsCarousel />
-        <Text>Results 2023/2024:</Text>
         <Schedule data={data}/>
         <BlogCard 
           image={yourBusinessHere} 

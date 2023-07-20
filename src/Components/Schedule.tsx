@@ -45,7 +45,8 @@ export function Schedule({ data }: TableScrollAreaProps) {
   return (
     <Card>
     <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
-      <Table miw={300}>
+      <Table captionSide='top' miw={300}>
+      <caption>Results 2023/2024</caption>
         <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
           <tr>
             <th>Date</th>
