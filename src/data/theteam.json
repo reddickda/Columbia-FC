@@ -9,7 +9,7 @@
     "avatar": "", "name": "Jose Rech", "email": "", "nationality": "Argentina", "position": "Midfielder"
   },
   {
-    "avatar": "", "name": "David Reddick", "email": "", "nationality": "USA", "position": "Defender"
+    "avatar": "", "name": "David Reddick", "email": "", "nationality": "USA", "position": "Defender/Forward"
   },
   {
     "avatar": "", "name": "Garrett Scheetz", "email": "", "nationality": "USA", "position": "Defender"
@@ -22,5 +22,17 @@
   },
   {
     "avatar": "", "name": "Isaac Oluwasakin", "email": "", "nationality": "Nigeria", "position": "Forward"
+  },
+  {
+    "avatar": "", "name": "Nahom Negesse", "email": "", "nationality": "Ethiopia", "position": "Defender"
+  },
+  {
+    "avatar": "", "name": "Farid El Defrawy", "email": "", "nationality": "Egypt", "position": "Defender"
+  },
+  {
+    "avatar": "", "name": "Shiv Patel", "email": "", "nationality": "India", "position": "Defender/Forward"
+  },
+  {
+    "avatar": "", "name": "Hector Cruz", "email": "", "nationality": "Honduras", "position": "Defender"
   }
 ]

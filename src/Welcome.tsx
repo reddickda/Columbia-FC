@@ -6,8 +6,6 @@ import { Schedule } from "./Components/Schedule";
 import { NewsCarousel } from "./Components/NewsCarousel";
 import { BlogCard } from "./Components/BlogCard";
 import yourBusinessHere from './assets/yourbusinesshere.png'
-import theteam from './data/theteam.json'
-import { MeetTheTeam } from "./Components/MeetTheTeam";
 import { Notifications } from "@mantine/notifications";
 
 const links: { link: string; label: string }[] = [
@@ -15,7 +13,10 @@ const links: { link: string; label: string }[] = [
   { link: 'https://epslsoccer.com/', label: 'EPSL Mid Atlantic' }]
 
 const routes: { link: string; label: string }[] = [
-  { link: '/about', label: 'About' }]
+  { link: '/about', label: 'About' },
+  { link: '/roster', label: 'Meet the team' },
+  { link: '/supporters', label: 'Our supporters' }
+]
 
 const data = [
   { date: '8-5-2023', team: 'Baltimore Kickers', location: 'Troy Park', result: 'W' },
@@ -40,7 +41,6 @@ export default function Welcome() {
           date={''}
           author={{ name: '', avatar: '' }}
         />
-        <MeetTheTeam data={theteam} />
         <GetInTouchSimple />
       </Stack>
     </ThemeProvider>
