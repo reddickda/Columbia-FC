@@ -42,6 +42,8 @@ export function Schedule({ data }: TableScrollAreaProps) {
     </tr>
   ));
 
+  console.log(rows)
+
   return (
     <Card>
     <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
