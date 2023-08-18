@@ -45,8 +45,9 @@ export function Schedule({ data }: TableScrollAreaProps) {
   return (
     <Card>
     <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
-      <Table captionSide='top' miw={300}>
-      <caption>Results 2023/2024</caption>
+      Schedule coming soon...
+      {<Table captionSide='top' miw={300}>
+      <caption>Schedule and Results 2023/2024</caption>
         <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
           <tr>
             <th style={{textAlign:'center'}}>Date</th>
@@ -55,8 +56,8 @@ export function Schedule({ data }: TableScrollAreaProps) {
             <th style={{textAlign:'center'}}>Result</th>
           </tr>
         </thead>
-        <tbody>{rows}</tbody>
-      </Table>
+        {/* <tbody>{rows}</tbody> */}
+      </Table>}
     </ScrollArea>
     </Card>
   );

@@ -31,7 +31,7 @@ export default function Welcome() {
     <ThemeProvider>
       <Notifications position='bottom-center' />
       <HeaderMiddle links={links} routes={routes} />
-      <Stack mt={80}>
+      <Stack align={'center'} mt={80}>
         <NewsCarousel />
         <Schedule data={data} />
         <BlogCard

@@ -3,7 +3,7 @@
     "avatar": "", "name": "Carlos Tolentino", "email": "", "nationality": "El Salvador", "position": "Director of Football"
   },
   {
-    "avatar": "", "name": "Hunter Hillis", "email": "", "nationality": "USA", "position": "Manager"
+    "avatar": "", "name": "Hunter Hillis", "email": "", "nationality": "USA", "position": "Manager/Midfielder"
   },
   {
     "avatar": "", "name": "Jose Rech", "email": "", "nationality": "Argentina", "position": "Midfielder"
@@ -34,5 +34,35 @@
   },
   {
     "avatar": "", "name": "Hector Cruz", "email": "", "nationality": "Honduras", "position": "Defender"
+  },
+  {
+    "avatar": "", "name": "Tony Nguyen", "email": "", "nationality": "Vietnam", "position": "Defender"
+  },
+  {
+    "avatar": "", "name": "Heiner de Leon", "email": "", "nationality": "Guatemala", "position": "Midfielder"
+  },
+  {
+    "avatar": "", "name": "Jamal Allums", "email": "", "nationality": "USA", "position": "Midfielder"
+  },
+  {
+    "avatar": "", "name": "David Iriah", "email": "", "nationality": "Nigeria", "position": "Forward"
+  },
+  {
+    "avatar": "", "name": "David Carrera", "email": "", "nationality": "Ecuador", "position": "Midfield"
+  },
+  {
+    "avatar": "", "name": "Nicolas de los Santos", "email": "", "nationality": "Uruguay", "position": "Defender"
+  },
+  {
+    "avatar": "", "name": "David Jang", "email": "", "nationality": "South Korea", "position": "Midfielder"
+  },
+  {
+    "avatar": "", "name": "Brendan Crossman", "email": "", "nationality": "USA", "position": "Midfielder"
+  },
+  {
+    "avatar": "", "name": "Domenic Bongiovanni", "email": "", "nationality": "Italy", "position": "Defender"
+  },
+  {
+    "avatar": "", "name": "Cameron Shalge", "email": "", "nationality": "USA", "position": "Midfielder"
   }
 ]
